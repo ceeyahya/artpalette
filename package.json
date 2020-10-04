@@ -8,8 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/ui": "^0.6.2",
+    "autoprefixer": "9.8.6",
+    "fontfaceobserver": "^2.1.0",
     "next": "9.5.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "tailwindcss": "^1.8.10"
   }
 }

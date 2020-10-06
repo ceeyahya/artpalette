@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+import GalleryItem from '@/components/GalleryItem';
 
 async function getPaintings() {
   const res = await fetch('/api/paintings');
@@ -11,9 +12,23 @@ export default function gallery() {
   const { data, error } = useSWR('/api/paintings', getPaintings);
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
-  return (
-    <div className="grid gap-4 mx-auto mt-4 lg:max-w-none">
-      {data.paintings.map((painting) => (
+  return data.paintings.map((painting) => {
+    return (
+      <div>
+        <GalleryItem
+          title={painting.title}
+          artist={painting.artist}
+          creationYear={painting.creationYear}
+          paintingURL={painting.paintingURL}
+        />
+      </div>
+    );
+  });
+}
+
+{
+  /* <div className="grid gap-4 mx-auto mt-4 lg:max-w-none">
+      {
         <div className="flex flex-col mt-2 transition duration-150 ease-in-out rounded-sm shadow cursor-pointer lg:flex-row bg-ygreen-dark">
           <div className="flex-shrink-1">
             <img
@@ -35,6 +50,5 @@ export default function gallery() {
           </div>
         </div>
       ))}
-    </div>
-  );
+    </div> */
 }

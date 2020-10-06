@@ -5,8 +5,10 @@ const client = new MongoClient(process.env.DATABASE_URL, {
   useUnifiedTopology: true,
 });
 
-async function connectDB() {
-  if (!client.isConnected) await client.connect();
+export async function connectDB() {
+  if (!client.isConnected()) {
+    await client.connect();
+  }
   const db = client.db('paintings');
   return { db, client };
 }

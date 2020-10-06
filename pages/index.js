@@ -14,8 +14,8 @@ export default function Home() {
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
             fugiat aliqua.
           </p>
-          <div className="max-w-xl mx-auto mt-5 md:mt-8">
-            <div className="flex mt-10 rounded-md sm:ml-3 item-center">
+          <div className="max-w-xl mx-auto mt-5 md:mt-8 ">
+            <div className="flex mt-10 sm:ml-3 item-center">
               <Link href="/gallery">
                 <a className="flex items-center justify-center px-8 py-3 text-lg font-bold leading-6 transition duration-150 ease-in-out border border-transparent text-beige-base bg-ygreen-dark hover:bg-ygreen-light focus:outline-none focus:bg-ygreen-light focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10">
                   Explore the Gallery

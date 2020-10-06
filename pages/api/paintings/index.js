@@ -6,7 +6,6 @@ export default async function (req, res) {
     const paintings = await db.collection('paintings').find().toArray();
     res.status(200);
     res.json({ paintings });
-    console.log(paintings);
   } catch (err) {
     res.status(500);
     res.json({ error: err });

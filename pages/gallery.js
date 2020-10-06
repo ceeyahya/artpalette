@@ -4,7 +4,6 @@ import GalleryItem from '@/components/GalleryItem';
 async function getPaintings() {
   const res = await fetch('/api/paintings');
   const data = await res.json();
-  console.log(data);
   return data;
 }
 

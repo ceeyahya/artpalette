@@ -20,7 +20,7 @@ export default function GalleryItem({
           <p class=" text-beige-darkest mx-auto text-lg max-w-7xl md:mt-5">
             {artist} ({creationYear})
           </p>
-          <div className="mt-24 lg:mt-64">
+          <div className="mt-8 md:mt-24 lg:mt-64">
             <h1 className="font-serif text-xl font-bold lg:text-2xl text-ygreen-dark">
               Color Palette
             </h1>

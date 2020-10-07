@@ -9,10 +9,10 @@ export default function Home() {
           <h2 className="font-serif text-4xl italic font-extrabold text-ygreen-dark sm:text-5xl md:text-6xl">
             Explore colors used in famous paintings
           </h2>
-          <p className="max-w-md mx-auto mt-3 text-base text-beige-darker sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+          <p className="max-w-md mx-auto mt-2 text-base text-beige-darker sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            Fellow designers and developers struggling with color and color
+            schemes now have somewhere to get inspired and help (if they want
+            to) others. and for others who are just here for the *ART* enjoy !
           </p>
           <div className="max-w-xl mx-auto mt-5 md:mt-8 ">
             <div className="flex flex-col mt-10 lg:flex-row sm:ml-3 item-center">

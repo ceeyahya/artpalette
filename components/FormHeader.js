@@ -10,8 +10,9 @@ export default function FormHeader() {
         Suggest an addition to the gallery
       </h2>
       <p className="mt-4 text-lg leading-6 text-beige-darkest">
-        Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa
-        dictumst amet. Sapien tortor lacus arcu.
+        Interested in suggesting a new addition to the gallery, maybe{' '}
+        <b>your own painting</b>. Fill the form below and I'll gradually add
+        them.
       </p>
     </div>
   );

@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="antialiased">
       <Head>
-        <title>Art Palette</title>
+        <title>Color Compendium</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

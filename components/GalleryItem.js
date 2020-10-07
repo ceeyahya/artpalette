@@ -10,21 +10,18 @@ export default function GalleryItem({
   const { data, loading, error } = usePalette(paintingURL);
 
   return (
-    <main class="lg:relative h-screen">
+    <main class="lg:relative h-screen section">
       <div class="mx-auto max-w-none w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
         <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
           <GalleryLinks />
           <h2 class="max-w-7xl mx-auto text-4xl mt-24 tracking-tight leading-10 font-extrabold text-ygreen-dark font-serif sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
             {title}
           </h2>
-          <p class="mt-3 max-w-7xl mx-auto text-lg text-beige-darkest sm:text-xl md:mt-5">
-            {artist}
+          <p class=" text-beige-darkest mx-auto text-lg max-w-7xl md:mt-5">
+            {artist} ({creationYear})
           </p>
-          <p class="mt-3 max-w-7xl mx-auto text-xl text-beige-darkest sm:text-xl md:mt-5">
-            {creationYear}
-          </p>
-          <div className="mt-12 lg:mt-24">
-            <h1 className="font-serif text-lg font-bold text-ygreen-dark">
+          <div className="mt-24 lg:mt-64">
+            <h1 className="font-serif text-xl font-bold lg:text-2xl text-ygreen-dark">
               Color Palette
             </h1>
             <ul class="mt-4 grid grid-cols-6 h-12">

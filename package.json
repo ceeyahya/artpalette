@@ -8,9 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.18",
     "@tailwindcss/ui": "^0.6.2",
+    "airtable": "^0.10.0",
     "autoprefixer": "9.8.6",
     "fontfaceobserver": "^2.1.0",
+    "googleapis": "^61.0.0",
     "mongodb": "^3.6.2",
     "next": "9.5.1",
     "react": "16.13.1",

@@ -1,5 +1,7 @@
 import useSWR from 'swr';
 import GalleryItem from '@/components/GalleryItem';
+import { LoadingState, ErrorState } from '@/components/LoadingState';
+import ReactFullpage from '@fullpage/react-fullpage';
 
 async function getPaintings() {
   const res = await fetch('/api/paintings');
@@ -9,45 +11,37 @@ async function getPaintings() {
 
 export default function gallery() {
   const { data, error } = useSWR('/api/paintings', getPaintings);
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
-  return data.paintings.map((painting) => {
+  if (error)
     return (
       <div>
-        <GalleryItem
-          title={painting.title}
-          artist={painting.artist}
-          creationYear={painting.creationYear}
-          paintingURL={painting.paintingURL}
-        />
+        <ErrorState />
       </div>
     );
-  });
-}
+  if (!data)
+    return (
+      <div>
+        <LoadingState />
+      </div>
+    );
 
-{
-  /* <div className="grid gap-4 mx-auto mt-4 lg:max-w-none">
-      {
-        <div className="flex flex-col mt-2 transition duration-150 ease-in-out rounded-sm shadow cursor-pointer lg:flex-row bg-ygreen-dark">
-          <div className="flex-shrink-1">
-            <img
-              src={painting.paintingURL}
-              className="object-center p-2"
-              width="500"
-              height="500"
-            />
-          </div>
-          <div className="relative">
-            <h1 className="p-2 mt-0 text-4xl font-bold text-beige-base">
-              {painting.title}
-            </h1>
-            <p className="max-w-md pl-2 text-beige-base">{painting.artist}</p>
-            <p className="max-w-md pl-2 text-beige-base">
-              {painting.creationYear}
-            </p>
-            <div className="static py-4 pl-2 text-beige-base">COLORS</div>
-          </div>
-        </div>
-      ))}
-    </div> */
+  return (
+    <ReactFullpage
+      licenseKey={process.env.FULLPAGE_LICENSE_KEY}
+      scrollingSpeed={2000}
+      render={(comp) =>
+        console.log('render prop change') || (
+          <ReactFullpage.Wrapper>
+            {data.paintings.map((painting) => (
+              <GalleryItem
+                title={painting.title}
+                artist={painting.artist}
+                creationYear={painting.creationYear}
+                paintingURL={painting.paintingURL}
+              />
+            ))}
+          </ReactFullpage.Wrapper>
+        )
+      }
+    />
+  );
 }

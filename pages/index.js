@@ -15,7 +15,7 @@ export default function Home() {
             fugiat aliqua.
           </p>
           <div className="max-w-xl mx-auto mt-5 md:mt-8 ">
-            <div className="flex mt-10 sm:ml-3 item-center">
+            <div className="flex flex-col mt-10 lg:flex-row sm:ml-3 item-center">
               <Link href="/gallery">
                 <a className="flex items-center justify-center px-8 py-3 text-lg font-bold leading-6 transition duration-150 ease-in-out border border-transparent text-beige-base bg-ygreen-dark hover:bg-ygreen-light focus:outline-none focus:bg-ygreen-light focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10">
                   Explore the Gallery
@@ -35,7 +35,7 @@ export default function Home() {
                 </a>
               </Link>
               <Link href="/suggest">
-                <a className="flex items-center justify-center px-8 py-3 text-lg font-bold leading-6 underline transition duration-150 ease-in-out text-ygreen-light hover:text-ygreen-dark focus:outline-none focus:text-ygreen-light md:py-4 md:text-lg md:px-10">
+                <a className="justify-center px-8 py-3 text-lg font-bold leading-6 underline transition duration-150 ease-in-out text-ygreen-light hover:text-ygreen-dark focus:outline-none focus:text-ygreen-light md:py-4 md:text-lg md:px-10">
                   Suggest an addition
                 </a>
               </Link>
